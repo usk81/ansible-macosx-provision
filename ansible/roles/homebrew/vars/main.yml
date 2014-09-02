@@ -1,0 +1,26 @@
+homebrew:
+  taps:
+    - peco/peco
+    - homebrew/dupes
+    - homebrew/versions
+  packages:
+    - { name: bash }
+    - { name: bash-completion }
+    - { name: ack }
+    - { name: git }
+    - { name: hashpump }
+    - { name: lynx }
+    - { name: nmap }
+    - { name: node }
+    - { name: p7zip }
+    - { name: pigz }
+    - { name: pv }
+    - { name: rename }
+    - { name: sqlmap }
+    - { name: tree }
+    - { name: ucspi-tcp }
+    - { name: webkit2png }
+    - { name: zopfli }
+    - { name: peco }
+    - { name: wget, install_options: enable-iri }
+    - { name: gnu-sed, install_options: default-names }

@@ -1,0 +1,30 @@
+---
+#roles/homebrew-cask/tasks/main.yml
+- name: add taps for homebrew-cask
+  homebrew_tap:
+    tap: "{{ item }}"
+    state: present
+  with_items: homebrew_cask.taps
+
+- name: install brew cask
+  homebrew:
+    name: brew-cask
+    state: latest
+
+- name: install brewcask packages
+  homebrew_cask:
+    name: "{{ item }}"
+    state: installed
+  with_items: homebrew_cask.packages
+
+- name: install alfred
+  homebrew_cask:
+    name: alfred
+    state: installed
+  register: result
+
+# - debug: var=result
+
+- name: Alfred's scope to include the Caskroom
+  shell: brew cask alfred link
+  when: result.changed == true

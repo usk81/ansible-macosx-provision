@@ -1,0 +1,16 @@
+---
+# roles/config-files/task/main.yml
+- name: copy config files
+  template:
+    src: "{{ item }}"
+    dest: ~/{{ item }}
+    backup: yes
+  with_items:
+    - .aliases
+    - .bash_profile
+    - .bash_prompt
+    - .bashrc
+    - .curlrc
+
+- name: reload config files
+  shell: source ~/.bash_profile

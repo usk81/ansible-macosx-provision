@@ -1,0 +1,22 @@
+homebrew_cask:
+  taps:
+    - caskroom/cask
+    - yusukekomatsu/mycask
+  packages:
+    - bitcasa
+    - coteditor
+    - dropbox
+    - google-chrome
+    - google-chrome-canary
+    - hipchat
+    - magican
+    - skype
+    - virtualbox
+    - mplayerx
+    - xtrafinder
+    - todoist
+    - android-file-transfer
+    - imagealpha
+    - imageoptim
+    - kobito
+    - okayu
