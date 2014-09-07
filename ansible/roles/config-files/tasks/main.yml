@@ -14,5 +14,24 @@
     - .exports
     - .functions
 
+- name: copy git files
+  template:
+    src: "{{ item }}"
+    dest: ~/{{ item }}
+    backup: yes
+  with_items:
+    - .gitattributes
+    - .gitconfig
+    - .gitignore
+    - .gvimrc
+
+- name: add extra config file
+  template:
+    src: "{{ item }}"
+    dest: ~/{{ item }}
+    backup: yes
+  with_items:
+    - .extra
+
 - name: reload config files
   shell: source ~/.bash_profile
