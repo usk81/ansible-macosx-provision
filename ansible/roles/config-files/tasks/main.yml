@@ -11,6 +11,8 @@
     - .bash_prompt
     - .bashrc
     - .curlrc
+    - .exports
+    - .functions
 
 - name: reload config files
   shell: source ~/.bash_profile
