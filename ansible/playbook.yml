@@ -3,6 +3,6 @@
   gather_facts: no
   sudo: no
   roles:
+    - config-files
     - homebrew
     - homebrew-cask
-    - config-files
