@@ -27,11 +27,9 @@
 
 - name: add extra config file
   template:
-    src: "{{ item }}"
-    dest: ~/{{ item }}
+    src: .extra.j2
+    dest: ~/.extra
     backup: yes
-  with_items:
-    - .extra
 
 - name: reload config files
   shell: source ~/.bash_profile
