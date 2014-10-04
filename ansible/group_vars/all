@@ -1,0 +1,4 @@
+# git profile
+git_user:
+  name: "Your git name"
+  mail: "Your email"
